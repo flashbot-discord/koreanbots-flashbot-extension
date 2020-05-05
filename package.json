@@ -1,0 +1,10 @@
+{
+  "name": "dbkr-flashbot-extension",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "comjun04 <comjun04@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dbkr": "^0.1.2"
+  }
+}
