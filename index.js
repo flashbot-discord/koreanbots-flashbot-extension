@@ -14,7 +14,7 @@ class KoreanbotsExtension extends Extension {
 
     this.recentGuildCount = 0
     this.saveGuildCount()
-    setInterval(this.saveGuildCount, this._config.saveInterval || 10000)
+    setInterval(this.saveGuildCount.bind(this), this._config.saveInterval || 10000)
   }
 
   saveGuildCount() {
