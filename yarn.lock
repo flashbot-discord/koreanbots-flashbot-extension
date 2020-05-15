@@ -3,9 +3,9 @@
 
 
 koreanbots@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/koreanbots/-/koreanbots-1.0.6.tgz#ede19cfb68d65ee86756ff528865a3801af7e59b"
-  integrity sha512-kB+VR9aNP030ylA/ag56aeDgkoO1FEcLxfFEwWsXurQuxPuhw4ppCuXNRaaCuKW3dVXmzWBHf9QgkSARK79A1A==
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/koreanbots/-/koreanbots-1.0.9.tgz#2f977cce1cab49a7911ed3fb22e6294ec396a66d"
+  integrity sha512-1XuZnYnw5QZS4cZMbmASLoNTHUfIfNU5e+BkF8EpaKlqgvztae0WmEbNCsKDGZ5M3obPE8mGngaW9P3/379amw==
   dependencies:
     node-fetch "^2.6.0"
 
