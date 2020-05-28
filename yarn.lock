@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-koreanbots@^1.0.6:
+koreanbots@^1.0.9:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/koreanbots/-/koreanbots-1.0.9.tgz#2f977cce1cab49a7911ed3fb22e6294ec396a66d"
   integrity sha512-1XuZnYnw5QZS4cZMbmASLoNTHUfIfNU5e+BkF8EpaKlqgvztae0WmEbNCsKDGZ5M3obPE8mGngaW9P3/379amw==
