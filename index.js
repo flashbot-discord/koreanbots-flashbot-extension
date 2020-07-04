@@ -12,7 +12,6 @@ class KoreanbotsExtension extends Extension {
     if(typeof this._config.token !== 'string' || this._config.token.length < 1) return this._logger.error('Invalid token provided. Extension stopped.')
 
     this.bot = new koreanbots.MyBot(this._config.token)
-    console.log(this.bot)
 
     this.recentGuildCount = 0
     this.saveGuildCount()
