@@ -1,6 +1,6 @@
 {
   "name": "koreanbots-flashbot-extension",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "comjun04 <comjun04@gmail.com>",
   "license": "MIT",
   "dependencies": {
