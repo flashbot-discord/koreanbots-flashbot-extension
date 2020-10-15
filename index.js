@@ -1,4 +1,5 @@
-const koreanbots = require('koreanbots')
+const { MyBot } = require('koreanbots')
+
 const Extension = require('../../classes/Extension')
 
 class KoreanbotsExtension extends Extension {
@@ -8,10 +9,13 @@ class KoreanbotsExtension extends Extension {
       description: 'Extension for Koreanbots'
     })
   }
+
   init() {
     if(typeof this._config.token !== 'string' || this._config.token.length < 1) return this._logger.error('Invalid token provided. Extension stopped.')
 
-    this.bot = new koreanbots.MyBot(this._config.token)
+    this.bot = new MyBot(this._config.token, {
+      hideToken: true
+    })
 
     this.recentGuildCount = 0
     this.saveGuildCount()
@@ -28,8 +32,9 @@ class KoreanbotsExtension extends Extension {
 
     if(typeof this._config.token !== 'string' || this._config.token.length < 1) return this._logger.error('Invalid token provided.')
     this.bot.update(guildCount)
-      .then(() => {
+      .then((res) => {
         this._logger.log('Guild Count updated: ' + guildCount)
+        this._logger.debug('Returned information:\n' + JSON.stringify(res, null, 2))
         this.recentGuildCount = guildCount
       })
       .catch((err) => this._logger.error(err))
