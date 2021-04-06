@@ -1,6 +1,6 @@
 const { MyBot } = require('koreanbots')
 
-const Extension = require('../../classes/Extension')
+const Extension = require('../../src/structures/Extension')
 
 class KoreanbotsExtension extends Extension {
   constructor(client) {
