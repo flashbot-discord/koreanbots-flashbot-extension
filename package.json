@@ -4,6 +4,6 @@
   "author": "comjun04 <comjun04@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "koreanbots": "^2.0.7"
+    "koreanbots": "^2.0.9"
   }
 }
