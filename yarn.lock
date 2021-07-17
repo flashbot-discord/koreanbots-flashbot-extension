@@ -276,10 +276,10 @@ isarray@~1.0.0:
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
   integrity sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=
 
-koreanbots@^2.0.9:
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/koreanbots/-/koreanbots-2.0.9.tgz#066b5c19fa3f94cf12f767e3fdc468430a4becc3"
-  integrity sha512-V6xCxe4CrTCUDRPyHJkits/3CB1ni2yWQdMwnMMXlDWM8zCDikSUMx4RFhYSMWOW6Qg8I4Tj8xjt5YiJS56pRA==
+koreanbots@^2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/koreanbots/-/koreanbots-2.0.12.tgz#afb14ba8a81f4017c5c6ec18c33bb16d43588605"
+  integrity sha512-lLZ6ItcZ4IyAo0wRf+9YDeS1CGZyUudGnph49Q7kqYQCSbcNvdGOIocjk7lVjbgfKApzCx5U9h1kmdM8zdD7jg==
   dependencies:
     "@discordjs/collection" "^0.1.6"
     discord.js "^12.2.0"
