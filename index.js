@@ -10,27 +10,37 @@ class KoreanbotsExtension extends Extension {
     })
   }
 
-  init() {
-    if(typeof this._config.token !== 'string' || this._config.token.length < 1) return this._logger.error('Invalid token provided. Extension stopped.')
+  init () {
+    const config = {}
+    config.token = this._config.token || ''
+    config.updateGuildCount = this._config.updateGuildCount == null || this._config.updateGuildCount === true
+    config.updateGuildCountInterval = this._config.updateGuildCountInterval || 60000 * 10
 
-    this.bot = new MyBot(this._config.token, {
+    this._config = config
+
+    if (typeof config.token !== 'string' || config.token.length < 1) return this._logger.error('Invalid token provided. Extension stopped.')
+
+    this.bot = new MyBot(config.token, {
       hideToken: true
     })
 
-    this.recentGuildCount = 0
-    this.saveGuildCount()
-    this.intervalID = setInterval(this.saveGuildCount.bind(this), this._config.saveInterval || 60000 * 10)
+    if (config.updateGuildCount) {
+      // this.recentGuildCount = 0
+      this.updateGuildCount()
+      this.intervalID = setInterval(this.updateGuildCount.bind(this), config.updateGuildCountInterval)
+    } else {
+      this._logger.log('disabled automatic guild count updating')
+    }
   }
 
   destroy() {
     clearInterval(this.intervalID)
   }
 
-  saveGuildCount() {
+  updateGuildCount() {
     const guildCount = this._client.guilds.cache.size
-    if(guildCount === this.recentGuildCount) return this._logger.debug('Guild Count same as before: ' + guildCount + ', Skipping.')
+    // if(guildCount === this.recentGuildCount) return this._logger.debug('Guild Count same as before: ' + guildCount + ', Skipping.')
 
-    if(typeof this._config.token !== 'string' || this._config.token.length < 1) return this._logger.error('Invalid token provided.')
     this.bot.update(guildCount)
       .then((res) => {
         this._logger.log('Guild Count updated: ' + guildCount)
